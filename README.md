@@ -12,7 +12,7 @@ cmake --build .
 ./TinyRayTracer > ../image.ppm     # on Windows: .\TinyRayTracer.exe > ..\image.ppm
 ```
 
-Open `image.ppm` with an image viewer that supports PPM (GIMP, or on macOS "Preview" can't — use `feh`, `IrfanView`, or convert it: `magick image.ppm image.png` if you have ImageMagick).
+Open `image.ppm` with an image viewer that supports PPM (GIMP, or on macOS "Preview" can't, use `feh`, `IrfanView`, or convert it: `magick image.ppm image.png` if you have ImageMagick).
 
 You should see a gradient: red increasing left to right, green increasing top to bottom.
 
