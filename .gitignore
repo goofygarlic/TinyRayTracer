@@ -1,0 +1,25 @@
+# Build outputs
+build/
+out/
+
+# Compiled binaries
+*.exe
+*.obj
+*.o
+*.exp
+*.ilk
+*.pdb
+ 
+# Rendered output (generated, not source)
+*.ppm
+*.png
+*.jpg
+ 
+# IDE / editor folders
+.vs/
+.vscode/
+*.user
+ 
+# OS junk
+Thumbs.db
+.DS_Store
