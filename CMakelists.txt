@@ -4,7 +4,6 @@ project(TinyRayTracer CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
  
-# Turn on optimizations even in a default build - ray tracing is slow otherwise
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()

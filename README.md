@@ -18,7 +18,12 @@ You should see a gradient: red increasing left to right, green increasing top to
 
 ## What's here
 
-- `src/main.cpp` — writes a test gradient image directly to stdout in PPM format. Just proves the toolchain works before adding any ray tracing math.
+- `src/main.cpp`
+- `src/vec3.h` - Class made to represent a 3D Vector.
+- `src/ray.h`
+- `src/color.h`
+
+
 
 ## Roadmap
 
