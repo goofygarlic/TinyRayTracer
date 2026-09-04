@@ -12,7 +12,7 @@ int main(){
 
     auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
     auto material_centerBall = make_shared<lambertian>(color(0.1, 0.2, 0.5));
-    auto material_leftBall = make_shared<metal>(color(0.8, 0.8, 0.8), 0.3);
+    auto material_leftBall = make_shared<dielectric>(1.50);
     auto material_rightBall = make_shared<metal>(color(0.8, 0.6, 0.2), 1.0);
     
     world.add(make_shared<sphere>(point3(0,-100.5,-1), 100, material_ground));

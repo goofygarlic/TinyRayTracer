@@ -27,7 +27,7 @@ You should see a gradient: red increasing left to right, green increasing top to
 - `src/sphere.h` - Does actual work on hittable objects defined as spheres. Contains the actual math behind detecting hits.
 - `src/common.h` - Contains common reference materials shared across multiple classes
 - `src/camera.h` - Works as the display of all the previous classes. Renders the image and handles ray coloring logic.\
-- `src/material.h` - Handles the math for the specific types of materials. Currently implenented Lambertian and Metal reflections.
+- `src/material.h` - Handles the math for the specific types of materials. Implemented Lambertian (matte), metal, and dielectric (glass) surfaces.
 
 
 
