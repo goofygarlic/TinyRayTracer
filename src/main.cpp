@@ -21,11 +21,17 @@ int main(){
     world.add(make_shared<sphere>(point3(-1.0,0.0,-1.0), 0.5, material_leftBall));
     world.add(make_shared<sphere>(point3(1.0,0.0,-1.0), 0.5, material_rightBall));
 
+    // CAMERA SETTINGS
+
     camera cam;
     cam.aspect_ratio = 16.0 / 9.0;
     cam.image_width = 1280;
     cam.samples_per_pixel = 100;
     cam.max_depth = 50;
+    cam.vfov = 20;
+    cam.lookingFrom = point3(-2, 2, 1);
+    cam.lookingAt = point3(0, 0, -1);
+    cam.vUp = vec3(0,1,0);
 
     cam.render(world);
 }
