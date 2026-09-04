@@ -3,6 +3,7 @@
 #include "color.h"
 #include "hittable.h"
 #include "common.h"
+#include "material.h"
 
 class camera {
     public:
@@ -80,15 +81,14 @@ class camera {
             
             hit_record rec;
 
-            if(world.hit(r, 0.001, infinity, rec)){
-                vec3 direction = rec.normal + random_unit_vector();
+            if(world.hit(r, 0.001, infinity, rec)) {
+                ray scattered;
+                color attenuation;
 
-                if(direction.near_zero()){
-                    direction = rec.normal;
+                if(rec.mat->scatter(r, rec, attenuation, scattered)) {
+                    return attenuation * ray_color(scattered, depth - 1, world);
                 }
-                
-                color ballColor(0.8, 0.2, 0.8); // values can be modified to change the color based on % reflection per R, G, B.
-                return ballColor * ray_color(ray(rec.p, direction), depth - 1, world); 
+                return color(0,0,0);
             }
 
             vec3 unit_direction = unit_vector(r.direction());
